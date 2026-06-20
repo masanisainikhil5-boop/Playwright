@@ -1,0 +1,191 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: qaplayground.spec.ts >> Automate qaplayground site
+- Location: tests\qaplayground.spec.ts:4:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.fill: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('textbox', { name: 'Full Name' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "QA PlayGround - Automation Testing Practice Platform QA PlayGround" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]:
+          - img "QA PlayGround - Automation Testing Practice Platform" [ref=e7]
+          - generic [ref=e8]: QA PlayGround
+      - navigation "Main navigation" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Study Tracker" [ref=e11] [cursor=pointer]:
+          - /url: /study-tracker/dashboard
+        - link "Bank Demo" [ref=e12] [cursor=pointer]:
+          - /url: /bank
+        - link "Practice" [ref=e13] [cursor=pointer]:
+          - /url: /practice
+        - link "QA Tools" [ref=e14] [cursor=pointer]:
+          - /url: /qa-tools
+        - link "Blog" [ref=e15] [cursor=pointer]:
+          - /url: /blog
+        - generic [ref=e16]:
+          - button "Toggle theme" [ref=e17] [cursor=pointer]:
+            - img
+            - generic [ref=e18]: Toggle theme
+          - link "Login" [ref=e19] [cursor=pointer]:
+            - /url: /login
+  - main [ref=e20]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - img [ref=e27]
+        - heading "Create Account" [level=1] [ref=e30]
+        - generic [ref=e31]: QA PlayGround — join to track your progress
+      - generic [ref=e33]:
+        - button "Continue with Google" [ref=e34] [cursor=pointer]:
+          - img
+          - text: Continue with Google
+        - button "Continue with Email" [ref=e35] [cursor=pointer]:
+          - img
+          - text: Continue with Email
+      - paragraph [ref=e37]:
+        - text: Already have an account?
+        - link "Sign in" [ref=e38] [cursor=pointer]:
+          - /url: /login
+  - region "Notifications alt+T"
+  - contentinfo [ref=e39]:
+    - contentinfo "Site footer" [ref=e40]:
+      - generic [ref=e41]:
+        - text: Footer Navigation
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - link "QA PlayGround" [ref=e44] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e45]: QA PlayGround
+            - paragraph [ref=e46]: A purpose-built practice platform for QA automation engineers. Learn Selenium, Playwright, and Cypress through hands-on interactive elements and real-world scenarios.
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - img [ref=e49]
+                - text: Practice Elements
+              - generic [ref=e54]:
+                - img [ref=e55]
+                - text: Bank Demo
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - text: Study Tracker
+            - generic "Social media links" [ref=e60]:
+              - link "YouTube" [ref=e61] [cursor=pointer]:
+                - /url: https://www.youtube.com/@qaplayground
+                - img [ref=e62]
+              - link "GitHub" [ref=e64] [cursor=pointer]:
+                - /url: https://github.com/kundalik-dev
+                - img [ref=e65]
+              - link "Twitter" [ref=e67] [cursor=pointer]:
+                - /url: https://x.com/qaplayground
+                - img [ref=e68]
+              - link "Telegram" [ref=e70] [cursor=pointer]:
+                - /url: https://t.me/share/url?url=https%3A%2F%2Fqaplayground.com
+                - img [ref=e71]
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: Platform
+            - navigation "Platform links" [ref=e75]:
+              - link "Practice Elements 22+ elements" [ref=e76] [cursor=pointer]:
+                - /url: /practice
+                - img [ref=e78]
+                - generic [ref=e83]:
+                  - text: Practice Elements
+                  - generic [ref=e84]: 22+ elements
+              - link "Bank Demo App E2E testing" [ref=e85] [cursor=pointer]:
+                - /url: /bank
+                - img [ref=e87]
+                - generic [ref=e89]:
+                  - text: Bank Demo App
+                  - generic [ref=e90]: E2E testing
+              - link "Study Tracker New" [ref=e91] [cursor=pointer]:
+                - /url: /study-tracker/dashboard
+                - img [ref=e93]
+                - generic [ref=e95]:
+                  - text: Study Tracker
+                  - generic [ref=e96]: New
+              - link "QA Tools Free" [ref=e97] [cursor=pointer]:
+                - /url: /qa-tools
+                - img [ref=e99]
+                - generic [ref=e101]:
+                  - text: QA Tools
+                  - generic [ref=e102]: Free
+          - generic [ref=e103]:
+            - paragraph [ref=e104]: Learn
+            - navigation "Learn links" [ref=e105]:
+              - link "Practice Elements" [ref=e106] [cursor=pointer]:
+                - /url: /practice
+              - link "Blog & Tutorials" [ref=e107] [cursor=pointer]:
+                - /url: /blog
+              - link "Free QA Tools" [ref=e108] [cursor=pointer]:
+                - /url: /qa-tools
+              - link "AI Syllabus Generator" [ref=e109] [cursor=pointer]:
+                - /url: /study-tracker/ai-syllabus-prompt
+              - link "Automation Framework" [ref=e110] [cursor=pointer]:
+                - /url: https://github.com/kundalik5545/QA_PlayGround_Automation_Framework
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: Company
+            - navigation "Company links" [ref=e113]:
+              - link "About Us" [ref=e114] [cursor=pointer]:
+                - /url: /about-us
+              - link "Contact Us" [ref=e115] [cursor=pointer]:
+                - /url: /contact-us
+              - link "Raise an Issue" [ref=e116] [cursor=pointer]:
+                - /url: https://github.com/kundalik-dev/qaplayground-support/issues
+              - link "Privacy Policy" [ref=e117] [cursor=pointer]:
+                - /url: /privacy-policy
+              - link "Login" [ref=e118] [cursor=pointer]:
+                - /url: /login
+        - generic [ref=e119]:
+          - generic [ref=e120]: © 2026 QA Playground. All rights reserved.
+          - generic [ref=e121]:
+            - text: Built for QA Engineers by
+            - link "Kundalik Jadhav" [ref=e122] [cursor=pointer]:
+              - /url: https://github.com/kundalik-dev
+  - alert [ref=e123]: Create Account — QA Playground
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect} from "@playwright/test"
+  2  | 
+  3  | //Singup
+  4  | test("Automate qaplayground site", async({page}) => {
+  5  |     await page.goto("https://qaplayground.com/", {waitUntil: "networkidle"})
+  6  | 
+  7  |     await page.getByLabel("Main navigation").getByRole("link", { name: "Login" }).click();
+  8  |     await page.getByRole("link", {name: "Sign up"}).click()
+  9  |     await page.getByRole("button", {name: "Continue with Email"}).click()
+> 10 |     await page.getByRole("textbox", {name: "Full Name"}).fill("Sai Nikhil Masani")
+     |                                                          ^ Error: locator.fill: Test timeout of 30000ms exceeded.
+  11 |     await page.getByRole("textbox", {name: "Email"}).fill("masani.sainikhil1999@gmail.com")
+  12 |     await page.getByRole("textbox", {name: "Password"}).fill("Qa@1234")
+  13 |     await page.getByRole("textbox", {name: "Confirm Password"}).fill("Qa@1234")
+  14 |     await page.getByRole("button", {name: "Create Account"}).click()
+  15 | 
+  16 | 
+  17 | })
+```
