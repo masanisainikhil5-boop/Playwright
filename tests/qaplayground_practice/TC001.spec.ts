@@ -83,3 +83,51 @@ test("TC04: Verify appended text value is retained in the field", async({page}) 
     await expect(appInput).toHaveValue(originalval + appentxt);
 
 })
+
+test("TC05: Verify text present inside input field matches expected value", async({page}) =>{
+    //Step1: Open browser and navigate to /practice/input-fields
+    await page.goto("https://qaplayground.com/practice/input-fields")
+
+    const inpf = page.getByTestId("input-verify-text")
+    await inpf.inputValue()
+    await expect(inpf).toHaveValue('QA PlayGround')
+
+})
+
+test("TC06: Verify getAttribute returns the correct input value", async({page}) =>{
+    //Step1: Open browser and navigate to /practice/input-fields
+    await page.goto("https://qaplayground.com/practice/input-fields")
+
+    const inpf = page.getByTestId("input-verify-text")
+    const getattr = await inpf.getAttribute('value')
+    await expect(getattr).toBe('QA PlayGround')
+
+    //If you were to type something new into that box using await inputElement.fill('New Text'), 
+    // getAttribute('value') might still return "QA PlayGround" (the original HTML attribute), 
+    // while inputValue() would return "New Text". This is a common interview question!
+
+})
+
+test("TC07: Verify input field text can be cleared successfully", async({page}) =>{
+    //Step1: Open browser and navigate to /practice/input-fields
+    await page.goto("https://qaplayground.com/practice/input-fields")
+
+    const inputext = page.getByTestId("input-clear-text")
+    await expect(inputext).toHaveValue('QA PlayGround Clear Me')
+    await inputext.fill("")
+    await expect(inputext).toBeEmpty();
+
+})
+
+test("TC08: Verify field is empty after executing clear action", async ({ page }) => {
+    await page.goto("https://qaplayground.com/practice/input-fields");
+
+    const inputField = page.getByTestId('input-clear-text');
+
+    await inputField.clear();
+    const attrValue = await inputField.getAttribute('value');
+    expect(attrValue).toBe("");
+
+    const currentVal = await inputField.inputValue();
+    expect(currentVal).toBe("");
+});

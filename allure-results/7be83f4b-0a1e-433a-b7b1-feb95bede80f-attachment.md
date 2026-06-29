@@ -1,0 +1,569 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: qaplayground_practice\Buttons\TC01.spec.ts >> Verify button is clickable
+- Location: tests\qaplayground_practice\Buttons\TC01.spec.ts:3:5
+
+# Error details
+
+```
+Error: expect(locator).toHaveValue(expected) failed
+
+Locator: locator('h1')
+Expected: "Master Automation Testing With"
+Error: Not an input element
+
+Call log:
+  - Expect "toHaveValue" with timeout 5000ms
+  - waiting for locator('h1')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "QA PlayGround - Automation Testing Practice Platform QA PlayGround" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]:
+          - img "QA PlayGround - Automation Testing Practice Platform" [ref=e7]
+          - generic [ref=e8]: QA PlayGround
+      - navigation "Main navigation" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Study Tracker" [ref=e11] [cursor=pointer]:
+          - /url: /study-tracker/dashboard
+        - link "Bank Demo" [ref=e12] [cursor=pointer]:
+          - /url: /bank
+        - link "Practice" [ref=e13] [cursor=pointer]:
+          - /url: /practice
+        - link "QA Tools" [ref=e14] [cursor=pointer]:
+          - /url: /qa-tools
+        - link "Blog" [ref=e15] [cursor=pointer]:
+          - /url: /blog
+        - generic [ref=e16]:
+          - button "Toggle theme" [ref=e17] [cursor=pointer]:
+            - img
+            - generic [ref=e18]: Toggle theme
+          - link "Login" [ref=e19] [cursor=pointer]:
+            - /url: /login
+  - main [ref=e20]:
+    - generic [ref=e24]:
+      - navigation "Breadcrumb" [ref=e25]:
+        - link "Home" [ref=e26] [cursor=pointer]:
+          - /url: /
+        - img [ref=e27]
+        - link "Practice" [ref=e29] [cursor=pointer]:
+          - /url: /practice
+        - img [ref=e30]
+        - generic [ref=e32]: How to Handle Button Clicks in Selenium and Playwright
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - img [ref=e38]
+              - text: Beginner
+            - generic [ref=e41]:
+              - img [ref=e42]
+              - text: 10 min
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - text: 8 scenarios
+          - heading "Button Automation Practice" [level=1] [ref=e49]
+          - paragraph [ref=e50]: Master button interactions in Selenium & Playwright — click, double-click, right-click, disabled state, click-and-hold, and browser navigation.
+        - generic [ref=e51]:
+          - region "Button practice exercises" [ref=e52]:
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]:
+                  - generic [ref=e57]: "Scenario 1: Navigate to Home Page"
+                  - img [ref=e58]
+                - link "Go To Home" [ref=e60] [cursor=pointer]:
+                  - /url: /
+                  - button "Go To Home" [active] [ref=e61]
+              - separator [ref=e62]
+              - generic [ref=e63]:
+                - generic [ref=e64]:
+                  - generic [ref=e65]: "Scenario 2: Get Button X & Y Coordinates"
+                  - img [ref=e66]
+                - button "Find Location" [ref=e68] [cursor=pointer]
+              - separator [ref=e69]
+              - generic [ref=e70]:
+                - generic [ref=e71]:
+                  - generic [ref=e72]: "Scenario 3: Get Button Color"
+                  - img [ref=e73]
+                - button "Find my color?" [ref=e75] [cursor=pointer]
+              - separator [ref=e76]
+              - generic [ref=e77]:
+                - generic [ref=e78]:
+                  - generic [ref=e79]: "Scenario 4: Get Button Height & Width"
+                  - img [ref=e80]
+                - button "Do you know my size?" [ref=e82] [cursor=pointer]
+              - separator [ref=e83]
+              - generic [ref=e84]:
+                - generic [ref=e85]:
+                  - generic [ref=e86]: "Scenario 5: Disabled Button"
+                  - generic [ref=e87]: DISABLED
+                - button "Action Disabled" [disabled]: Disabled
+              - separator [ref=e88]
+              - generic [ref=e89]:
+                - generic [ref=e90]:
+                  - generic [ref=e91]: "Scenario 6: Click and Hold for 1.5 sec"
+                  - img [ref=e92]
+                - button "Click and Hold!" [ref=e94] [cursor=pointer]
+              - separator [ref=e95]
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - generic [ref=e98]: "Scenario 7: Double Click Button"
+                  - img [ref=e99]
+                - button "Double Click Me" [ref=e101] [cursor=pointer]
+              - separator [ref=e102]
+              - generic [ref=e103]:
+                - generic [ref=e104]:
+                  - generic [ref=e105]: "Scenario 8: Right Click Button"
+                  - img [ref=e106]
+                - button "Right Click Me" [ref=e108] [cursor=pointer]
+              - paragraph [ref=e109]: No action performed yet.
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - paragraph [ref=e113]: What You'll Learn
+                - img [ref=e114]
+              - generic [ref=e117]:
+                - generic [ref=e118]:
+                  - button "Selenium (Java)" [ref=e119] [cursor=pointer]
+                  - button "Playwright (JS/PY)" [ref=e120] [cursor=pointer]
+                - generic [ref=e121]:
+                  - paragraph [ref=e122]: Selenium (Java)
+                  - list [ref=e123]:
+                    - listitem [ref=e124]:
+                      - generic [ref=e126]: click()
+                    - listitem [ref=e127]:
+                      - generic [ref=e129]: doubleClick()
+                    - listitem [ref=e130]:
+                      - generic [ref=e132]: contextClick()
+                    - listitem [ref=e133]:
+                      - generic [ref=e135]: isEnabled()
+                    - listitem [ref=e136]:
+                      - generic [ref=e138]: getLocation()
+              - generic [ref=e139]:
+                - img [ref=e140]
+                - generic [ref=e143]: Tutorial video coming soon
+            - generic [ref=e144]:
+              - paragraph [ref=e145]: Up Next
+              - link "Practice Forms automation — next element" [ref=e146] [cursor=pointer]:
+                - /url: /practice/forms
+                - img [ref=e148]
+                - generic [ref=e149]:
+                  - paragraph [ref=e150]: Forms
+                  - paragraph [ref=e151]: Fill and submit forms with validation scenarios
+                - img [ref=e152]
+        - generic [ref=e154]:
+          - heading "Test Cases" [level=2] [ref=e155]
+          - generic [ref=e156]:
+            - 'heading "TC01: Verify button is clickable and triggers action" [level=3] [ref=e158]':
+              - 'button "TC01: Verify button is clickable and triggers action" [ref=e159] [cursor=pointer]':
+                - generic [ref=e160]: "TC01: Verify button is clickable and triggers action"
+                - img [ref=e161]
+            - 'heading "TC02: Verify button displays the correct label text" [level=3] [ref=e164]':
+              - 'button "TC02: Verify button displays the correct label text" [ref=e165] [cursor=pointer]':
+                - generic [ref=e166]: "TC02: Verify button displays the correct label text"
+                - img [ref=e167]
+            - 'heading "TC03: Verify button triggers the correct action on click" [level=3] [ref=e170]':
+              - 'button "TC03: Verify button triggers the correct action on click" [ref=e171] [cursor=pointer]':
+                - generic [ref=e172]: "TC03: Verify button triggers the correct action on click"
+                - img [ref=e173]
+            - 'heading "TC04: Verify double-click button triggers double-click action" [level=3] [ref=e176]':
+              - 'button "TC04: Verify double-click button triggers double-click action" [ref=e177] [cursor=pointer]':
+                - generic [ref=e178]: "TC04: Verify double-click button triggers double-click action"
+                - img [ref=e179]
+            - 'heading "TC05: Verify right-click button triggers context menu action" [level=3] [ref=e182]':
+              - 'button "TC05: Verify right-click button triggers context menu action" [ref=e183] [cursor=pointer]':
+                - generic [ref=e184]: "TC05: Verify right-click button triggers context menu action"
+                - img [ref=e185]
+            - 'heading "TC06: Verify disabled button cannot be clicked" [level=3] [ref=e188]':
+              - 'button "TC06: Verify disabled button cannot be clicked" [ref=e189] [cursor=pointer]':
+                - generic [ref=e190]: "TC06: Verify disabled button cannot be clicked"
+                - img [ref=e191]
+            - 'heading "TC07: Verify button is enabled when it should be" [level=3] [ref=e194]':
+              - 'button "TC07: Verify button is enabled when it should be" [ref=e195] [cursor=pointer]':
+                - generic [ref=e196]: "TC07: Verify button is enabled when it should be"
+                - img [ref=e197]
+            - 'heading "TC08: Verify button is responsive on different screen sizes" [level=3] [ref=e200]':
+              - 'button "TC08: Verify button is responsive on different screen sizes" [ref=e201] [cursor=pointer]':
+                - generic [ref=e202]: "TC08: Verify button is responsive on different screen sizes"
+                - img [ref=e203]
+            - 'heading "TC09: Verify button is accessible via keyboard" [level=3] [ref=e206]':
+              - 'button "TC09: Verify button is accessible via keyboard" [ref=e207] [cursor=pointer]':
+                - generic [ref=e208]: "TC09: Verify button is accessible via keyboard"
+                - img [ref=e209]
+            - 'heading "TC10: Verify button is accessible to screen readers" [level=3] [ref=e212]':
+              - 'button "TC10: Verify button is accessible to screen readers" [ref=e213] [cursor=pointer]':
+                - generic [ref=e214]: "TC10: Verify button is accessible to screen readers"
+                - img [ref=e215]
+            - 'heading "TC11: Verify button hover state is visually distinct" [level=3] [ref=e218]':
+              - 'button "TC11: Verify button hover state is visually distinct" [ref=e219] [cursor=pointer]':
+                - generic [ref=e220]: "TC11: Verify button hover state is visually distinct"
+                - img [ref=e221]
+            - 'heading "TC12: Verify button state resets after page refresh" [level=3] [ref=e224]':
+              - 'button "TC12: Verify button state resets after page refresh" [ref=e225] [cursor=pointer]':
+                - generic [ref=e226]: "TC12: Verify button state resets after page refresh"
+                - img [ref=e227]
+            - 'heading "TC13: Verify button does not overlap other page elements" [level=3] [ref=e230]':
+              - 'button "TC13: Verify button does not overlap other page elements" [ref=e231] [cursor=pointer]':
+                - generic [ref=e232]: "TC13: Verify button does not overlap other page elements"
+                - img [ref=e233]
+            - 'heading "TC14: Verify button styling matches design specification" [level=3] [ref=e236]':
+              - 'button "TC14: Verify button styling matches design specification" [ref=e237] [cursor=pointer]':
+                - generic [ref=e238]: "TC14: Verify button styling matches design specification"
+                - img [ref=e239]
+            - 'heading "TC15: Verify button page loads without errors" [level=3] [ref=e242]':
+              - 'button "TC15: Verify button page loads without errors" [ref=e243] [cursor=pointer]':
+                - generic [ref=e244]: "TC15: Verify button page loads without errors"
+                - img [ref=e245]
+      - article [ref=e247]:
+        - generic [ref=e248]:
+          - heading "Introduction" [level=2] [ref=e249]
+          - paragraph [ref=e250]: "Buttons are the most commonly interacted element in web automation. Engineers must handle:"
+          - list [ref=e251]:
+            - listitem [ref=e252]:
+              - strong [ref=e253]: Single click
+              - text: — basic
+              - code [ref=e254]: "`click()`"
+              - text: action
+            - listitem [ref=e255]:
+              - strong [ref=e256]: Double click
+              - text: — fires a different browser event
+            - listitem [ref=e257]:
+              - strong [ref=e258]: Right click
+              - text: — opens the context menu
+            - listitem [ref=e259]:
+              - strong [ref=e260]: Disabled button
+              - text: — assert it cannot be interacted with
+          - paragraph [ref=e261]:
+            - text: Selenium uses the
+            - strong [ref=e262]: Actions
+            - text: class for advanced mouse interactions. Playwright has click options built in.
+          - heading "Key Methods Summary" [level=2] [ref=e263]
+          - table [ref=e264]:
+            - rowgroup [ref=e265]:
+              - row "Action Selenium (Java) Playwright (JS) Playwright (Python)" [ref=e266]:
+                - columnheader "Action" [ref=e267]
+                - columnheader "Selenium (Java)" [ref=e268]
+                - columnheader "Playwright (JS)" [ref=e269]
+                - columnheader "Playwright (Python)" [ref=e270]
+            - rowgroup [ref=e271]:
+              - 'row "Single click `element.click()` `locator.click()` `locator.click()`" [ref=e272]':
+                - cell "Single click" [ref=e273]
+                - 'cell "`element.click()`" [ref=e274]':
+                  - code [ref=e275]: "`element.click()`"
+                - 'cell "`locator.click()`" [ref=e276]':
+                  - code [ref=e277]: "`locator.click()`"
+                - 'cell "`locator.click()`" [ref=e278]':
+                  - code [ref=e279]: "`locator.click()`"
+              - 'row "Double click `actions.doubleClick(el).perform()` `locator.dblclick()` `locator.dblclick()`" [ref=e280]':
+                - cell "Double click" [ref=e281]
+                - 'cell "`actions.doubleClick(el).perform()`" [ref=e282]':
+                  - code [ref=e283]: "`actions.doubleClick(el).perform()`"
+                - 'cell "`locator.dblclick()`" [ref=e284]':
+                  - code [ref=e285]: "`locator.dblclick()`"
+                - 'cell "`locator.dblclick()`" [ref=e286]':
+                  - code [ref=e287]: "`locator.dblclick()`"
+              - 'row "Right click `actions.contextClick(el).perform()` `locator.click({ button: \"right\" })` `locator.click(button=\"right\")`" [ref=e288]':
+                - cell "Right click" [ref=e289]
+                - 'cell "`actions.contextClick(el).perform()`" [ref=e290]':
+                  - code [ref=e291]: "`actions.contextClick(el).perform()`"
+                - 'cell "`locator.click({ button: \"right\" })`" [ref=e292]':
+                  - code [ref=e293]: "`locator.click({ button: \"right\" })`"
+                - 'cell "`locator.click(button=\"right\")`" [ref=e294]':
+                  - code [ref=e295]: "`locator.click(button=\"right\")`"
+              - 'row "Is disabled `!isEnabled()` `toBeDisabled()` `to_be_disabled()`" [ref=e296]':
+                - cell "Is disabled" [ref=e297]
+                - 'cell "`!isEnabled()`" [ref=e298]':
+                  - code [ref=e299]: "`!isEnabled()`"
+                - 'cell "`toBeDisabled()`" [ref=e300]':
+                  - code [ref=e301]: "`toBeDisabled()`"
+                - 'cell "`to_be_disabled()`" [ref=e302]':
+                  - code [ref=e303]: "`to_be_disabled()`"
+              - 'row "Get text `getText()` `textContent()` `text_content()`" [ref=e304]':
+                - cell "Get text" [ref=e305]
+                - 'cell "`getText()`" [ref=e306]':
+                  - code [ref=e307]: "`getText()`"
+                - 'cell "`textContent()`" [ref=e308]':
+                  - code [ref=e309]: "`textContent()`"
+                - 'cell "`text_content()`" [ref=e310]':
+                  - code [ref=e311]: "`text_content()`"
+          - separator [ref=e312]
+          - heading "1. Single Click" [level=2] [ref=e313]
+          - heading "Selenium (Java)" [level=3] [ref=e314]
+          - figure [ref=e315]:
+            - code [ref=e317]:
+              - generic [ref=e318]: driver.findElement(By.id("clickBtn")).click();
+              - generic [ref=e319]: assertTrue(driver.findElement(By.id("clickResult")).isDisplayed());
+              - button "Copy code" [ref=e320] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e322]
+          - figure [ref=e323]:
+            - code [ref=e325]:
+              - generic [ref=e326]: await page.locator("#clickBtn").click();
+              - generic [ref=e327]: await expect(page.locator("#clickResult")).toBeVisible();
+              - button "Copy code" [ref=e328] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e330]
+          - figure [ref=e331]:
+            - code [ref=e333]:
+              - generic [ref=e334]: page.locator("#clickBtn").click()
+              - generic [ref=e335]: expect(page.locator("#clickResult")).to_be_visible()
+              - button "Copy code" [ref=e336] [cursor=pointer]
+          - separator [ref=e338]
+          - heading "2. Double Click" [level=2] [ref=e339]
+          - heading "Selenium (Java)" [level=3] [ref=e340]
+          - figure [ref=e341]:
+            - code [ref=e343]:
+              - generic [ref=e344]: WebElement btn = driver.findElement(By.id("doubleClickBtn"));
+              - generic [ref=e345]: new Actions(driver).doubleClick(btn).perform();
+              - generic [ref=e347]: assertEquals("Double clicked!", driver.findElement(By.id("doubleClickResult")).getText());
+              - button "Copy code" [ref=e348] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e350]
+          - figure [ref=e351]:
+            - code [ref=e353]:
+              - generic [ref=e354]: await page.locator("#doubleClickBtn").dblclick();
+              - generic [ref=e355]: await expect(page.locator("#doubleClickResult")).toHaveText("Double clicked!");
+              - button "Copy code" [ref=e356] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e358]
+          - figure [ref=e359]:
+            - code [ref=e361]:
+              - generic [ref=e362]: page.locator("#doubleClickBtn").dblclick()
+              - generic [ref=e363]: expect(page.locator("#doubleClickResult")).to_have_text("Double clicked!")
+              - button "Copy code" [ref=e364] [cursor=pointer]
+          - separator [ref=e366]
+          - heading "3. Right Click (Context Menu)" [level=2] [ref=e367]
+          - heading "Selenium (Java)" [level=3] [ref=e368]
+          - figure [ref=e369]:
+            - code [ref=e371]:
+              - generic [ref=e372]: WebElement btn = driver.findElement(By.id("rightClickBtn"));
+              - generic [ref=e373]: new Actions(driver).contextClick(btn).perform();
+              - generic [ref=e375]: assertTrue(driver.findElement(By.id("contextMenu")).isDisplayed());
+              - button "Copy code" [ref=e376] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e378]
+          - figure [ref=e379]:
+            - code [ref=e381]:
+              - generic [ref=e382]: "await page.locator(\"#rightClickBtn\").click({ button: \"right\" });"
+              - generic [ref=e383]: await expect(page.locator("#contextMenu")).toBeVisible();
+              - button "Copy code" [ref=e384] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e386]
+          - figure [ref=e387]:
+            - code [ref=e389]:
+              - generic [ref=e390]: page.locator("#rightClickBtn").click(button="right")
+              - generic [ref=e391]: expect(page.locator("#contextMenu")).to_be_visible()
+              - button "Copy code" [ref=e392] [cursor=pointer]
+          - separator [ref=e394]
+          - heading "4. Disabled Button — verify it cannot be clicked" [level=2] [ref=e395]
+          - heading "Selenium (Java)" [level=3] [ref=e396]
+          - figure [ref=e397]:
+            - code [ref=e399]:
+              - generic [ref=e400]: WebElement btn = driver.findElement(By.id("disabledBtn"));
+              - generic [ref=e401]: assertFalse(btn.isEnabled());
+              - generic [ref=e402]: assertNotNull(btn.getAttribute("disabled"));
+              - button "Copy code" [ref=e403] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e405]
+          - figure [ref=e406]:
+            - code [ref=e408]:
+              - generic [ref=e409]: await expect(page.locator("#disabledBtn")).toBeDisabled();
+              - button "Copy code" [ref=e410] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e412]
+          - figure [ref=e413]:
+            - code [ref=e415]:
+              - generic [ref=e416]: expect(page.locator("#disabledBtn")).to_be_disabled()
+              - button "Copy code" [ref=e417] [cursor=pointer]
+          - separator [ref=e419]
+          - heading "5. Verify button text changes after click" [level=2] [ref=e420]
+          - heading "Selenium (Java)" [level=3] [ref=e421]
+          - figure [ref=e422]:
+            - code [ref=e424]:
+              - generic [ref=e425]: WebElement btn = driver.findElement(By.id("toggleBtn"));
+              - generic [ref=e426]: String before = btn.getText();
+              - generic [ref=e427]: btn.click();
+              - generic [ref=e428]: assertNotEquals(before, btn.getText());
+              - button "Copy code" [ref=e429] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e431]
+          - figure [ref=e432]:
+            - code [ref=e434]:
+              - generic [ref=e435]: const btn = page.locator("#toggleBtn");
+              - generic [ref=e436]: const before = await btn.textContent();
+              - generic [ref=e437]: await btn.click();
+              - generic [ref=e438]: expect(await btn.textContent()).not.toBe(before);
+              - button "Copy code" [ref=e439] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e441]
+          - figure [ref=e442]:
+            - code [ref=e444]:
+              - generic [ref=e445]: btn = page.locator("#toggleBtn")
+              - generic [ref=e446]: before = btn.text_content()
+              - generic [ref=e447]: btn.click()
+              - generic [ref=e448]: assert btn.text_content() != before
+              - button "Copy code" [ref=e449] [cursor=pointer]
+          - separator [ref=e451]
+          - heading "6. Click using keyboard Enter" [level=2] [ref=e452]
+          - heading "Selenium (Java)" [level=3] [ref=e453]
+          - figure [ref=e454]:
+            - code [ref=e456]:
+              - generic [ref=e457]: driver.findElement(By.id("submitBtn")).sendKeys(Keys.ENTER);
+              - button "Copy code" [ref=e458] [cursor=pointer]
+          - heading "Playwright (JS)" [level=3] [ref=e460]
+          - figure [ref=e461]:
+            - code [ref=e463]:
+              - generic [ref=e464]: await page.locator("#submitBtn").press("Enter");
+              - button "Copy code" [ref=e465] [cursor=pointer]
+          - heading "Playwright (Python)" [level=3] [ref=e467]
+          - figure [ref=e468]:
+            - code [ref=e470]:
+              - generic [ref=e471]: page.locator("#submitBtn").press("Enter")
+              - button "Copy code" [ref=e472] [cursor=pointer]
+          - blockquote [ref=e474]:
+            - paragraph [ref=e475]:
+              - text: 📄
+              - strong [ref=e476]: "Also Read:"
+              - link "Top 10 Best Automation Practice Website" [ref=e477] [cursor=pointer]:
+                - /url: https://www.qaplayground.com/blog/top-10-best-automation-practice-website
+      - generic [ref=e478]:
+        - generic [ref=e479]:
+          - img [ref=e480]
+          - heading "Frequently Asked Questions" [level=2] [ref=e483]
+        - generic [ref=e484]:
+          - heading "How do I click a button using Selenium WebDriver?" [level=3] [ref=e486]:
+            - button "How do I click a button using Selenium WebDriver?" [ref=e487] [cursor=pointer]:
+              - text: How do I click a button using Selenium WebDriver?
+              - img [ref=e488]
+          - heading "How do I perform a double-click on a button in Selenium WebDriver?" [level=3] [ref=e491]:
+            - button "How do I perform a double-click on a button in Selenium WebDriver?" [ref=e492] [cursor=pointer]:
+              - text: How do I perform a double-click on a button in Selenium WebDriver?
+              - img [ref=e493]
+          - heading "How do I right-click a button to trigger a context menu in Selenium?" [level=3] [ref=e496]:
+            - button "How do I right-click a button to trigger a context menu in Selenium?" [ref=e497] [cursor=pointer]:
+              - text: How do I right-click a button to trigger a context menu in Selenium?
+              - img [ref=e498]
+          - heading "How do I check if a button is disabled before clicking it in automation?" [level=3] [ref=e501]:
+            - button "How do I check if a button is disabled before clicking it in automation?" [ref=e502] [cursor=pointer]:
+              - text: How do I check if a button is disabled before clicking it in automation?
+              - img [ref=e503]
+          - heading "How do I wait for a button to become clickable in Playwright or Selenium?" [level=3] [ref=e506]:
+            - button "How do I wait for a button to become clickable in Playwright or Selenium?" [ref=e507] [cursor=pointer]:
+              - text: How do I wait for a button to become clickable in Playwright or Selenium?
+              - img [ref=e508]
+  - region "Notifications alt+T"
+  - contentinfo [ref=e510]:
+    - contentinfo "Site footer" [ref=e511]:
+      - generic [ref=e512]:
+        - text: Footer Navigation
+        - generic [ref=e513]:
+          - generic [ref=e514]:
+            - link "QA PlayGround" [ref=e515] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e516]: QA PlayGround
+            - paragraph [ref=e517]: A purpose-built practice platform for QA automation engineers. Learn Selenium, Playwright, and Cypress through hands-on interactive elements and real-world scenarios.
+            - generic [ref=e518]:
+              - generic [ref=e519]:
+                - img [ref=e520]
+                - text: Practice Elements
+              - generic [ref=e525]:
+                - img [ref=e526]
+                - text: Bank Demo
+              - generic [ref=e528]:
+                - img [ref=e529]
+                - text: Study Tracker
+            - generic "Social media links" [ref=e531]:
+              - link "YouTube" [ref=e532] [cursor=pointer]:
+                - /url: https://www.youtube.com/@qaplayground
+                - img [ref=e533]
+              - link "GitHub" [ref=e535] [cursor=pointer]:
+                - /url: https://github.com/kundalik-dev
+                - img [ref=e536]
+              - link "Twitter" [ref=e538] [cursor=pointer]:
+                - /url: https://x.com/qaplayground
+                - img [ref=e539]
+              - link "Telegram" [ref=e541] [cursor=pointer]:
+                - /url: https://t.me/share/url?url=https%3A%2F%2Fqaplayground.com
+                - img [ref=e542]
+          - generic [ref=e544]:
+            - paragraph [ref=e545]: Platform
+            - navigation "Platform links" [ref=e546]:
+              - link "Practice Elements 22+ elements" [ref=e547] [cursor=pointer]:
+                - /url: /practice
+                - img [ref=e549]
+                - generic [ref=e554]:
+                  - text: Practice Elements
+                  - generic [ref=e555]: 22+ elements
+              - link "Bank Demo App E2E testing" [ref=e556] [cursor=pointer]:
+                - /url: /bank
+                - img [ref=e558]
+                - generic [ref=e560]:
+                  - text: Bank Demo App
+                  - generic [ref=e561]: E2E testing
+              - link "Study Tracker New" [ref=e562] [cursor=pointer]:
+                - /url: /study-tracker/dashboard
+                - img [ref=e564]
+                - generic [ref=e566]:
+                  - text: Study Tracker
+                  - generic [ref=e567]: New
+              - link "QA Tools Free" [ref=e568] [cursor=pointer]:
+                - /url: /qa-tools
+                - img [ref=e570]
+                - generic [ref=e572]:
+                  - text: QA Tools
+                  - generic [ref=e573]: Free
+          - generic [ref=e574]:
+            - paragraph [ref=e575]: Learn
+            - navigation "Learn links" [ref=e576]:
+              - link "Practice Elements" [ref=e577] [cursor=pointer]:
+                - /url: /practice
+              - link "Blog & Tutorials" [ref=e578] [cursor=pointer]:
+                - /url: /blog
+              - link "Free QA Tools" [ref=e579] [cursor=pointer]:
+                - /url: /qa-tools
+              - link "AI Syllabus Generator" [ref=e580] [cursor=pointer]:
+                - /url: /study-tracker/ai-syllabus-prompt
+              - link "Automation Framework" [ref=e581] [cursor=pointer]:
+                - /url: https://github.com/kundalik5545/QA_PlayGround_Automation_Framework
+          - generic [ref=e582]:
+            - paragraph [ref=e583]: Company
+            - navigation "Company links" [ref=e584]:
+              - link "About Us" [ref=e585] [cursor=pointer]:
+                - /url: /about-us
+              - link "Contact Us" [ref=e586] [cursor=pointer]:
+                - /url: /contact-us
+              - link "Raise an Issue" [ref=e587] [cursor=pointer]:
+                - /url: https://github.com/kundalik-dev/qaplayground-support/issues
+              - link "Privacy Policy" [ref=e588] [cursor=pointer]:
+                - /url: /privacy-policy
+              - link "Login" [ref=e589] [cursor=pointer]:
+                - /url: /login
+        - generic [ref=e590]:
+          - generic [ref=e591]: © 2026 QA Playground. All rights reserved.
+          - generic [ref=e592]:
+            - text: Built for QA Engineers by
+            - link "Kundalik Jadhav" [ref=e593] [cursor=pointer]:
+              - /url: https://github.com/kundalik-dev
+  - alert [ref=e594]
+```
+
+# Test source
+
+```ts
+  1 | import {test, expect} from '@playwright/test'
+  2 | 
+  3 | test('Verify button is clickable', async({page}) =>{
+  4 |     await page.goto("https://qaplayground.com/practice/buttons")
+  5 | 
+  6 |     await page.getByTestId("btn-goto-home").click()
+> 7 |     await expect(page.locator('h1')).toHaveValue("Master Automation Testing With")
+    |                                      ^ Error: expect(locator).toHaveValue(expected) failed
+  8 | 
+  9 | })
+```

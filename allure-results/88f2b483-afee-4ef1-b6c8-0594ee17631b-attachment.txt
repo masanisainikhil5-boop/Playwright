@@ -1,0 +1,8 @@
+{
+  "vehicleName": "Toyota Fortuner",
+  "ownerName": "Nikhil",
+  "regNumber": "HR26CJ9945",
+  "vehicleType": "SUV",
+  "year": "2026",
+  "notes": "Family SUV with rugged performance"
+}

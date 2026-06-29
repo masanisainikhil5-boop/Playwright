@@ -1,3 +1,0 @@
-Balance before transfer: 50000
-Balance after transfer: 45000
-Remaining balance is: 45000

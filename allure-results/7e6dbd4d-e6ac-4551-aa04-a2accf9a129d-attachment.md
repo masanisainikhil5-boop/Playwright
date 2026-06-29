@@ -1,0 +1,627 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: locators\iframe.spec.ts >> Basic Web Test - Verify Page Title
+- Location: tests\locators\iframe.spec.ts:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.selectOption: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('#frame-one').contentFrame().getByRole('textbox', { name: 'Vehicle type' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - 'region "Announcement: AI Tester Blueprint new batch" [ref=e2]':
+    - generic [ref=e3]: LIVE
+    - generic [ref=e5]: AI Tester Blueprint
+    - generic [ref=e6]: New batch
+    - generic [ref=e7]: "|"
+    - generic [ref=e8]: 23 May 2026 · 11:00 AM IST
+    - generic [ref=e9]: "|"
+    - generic [ref=e10]:
+      - text: ₹35,000₹9,999
+      - emphasis [ref=e11]: 33% OFF
+    - generic [ref=e12]:
+      - text: Code
+      - code [ref=e13]: AITESTER
+    - link "Join" [ref=e14] [cursor=pointer]:
+      - /url: https://bit.ly/aitester2026
+    - link "Chat on WhatsApp" [ref=e15] [cursor=pointer]:
+      - /url: https://sdet.live/WhatsApp
+      - text: ☎
+    - button "Dismiss banner" [ref=e16] [cursor=pointer]: ×
+  - generic [ref=e17]:
+    - complementary "Practice navigation" [ref=e18]:
+      - generic [ref=e19]:
+        - link "T The Testing Academy" [ref=e20] [cursor=pointer]:
+          - /url: ../index.html
+          - generic [ref=e21]: T
+          - strong [ref=e23]: The Testing Academy
+        - button "Toggle sidebar" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+      - generic [ref=e28]:
+        - img [ref=e29]
+        - searchbox / [ref=e32]
+        - generic [ref=e33]: /
+      - navigation [ref=e34]:
+        - generic [ref=e35]:
+          - button "JavaScript" [expanded] [ref=e36] [cursor=pointer]:
+            - img [ref=e37]
+            - generic [ref=e40]: JavaScript
+            - img [ref=e41]
+          - list [ref=e43]:
+            - listitem [ref=e44]:
+              - link "Overview" [ref=e45] [cursor=pointer]:
+                - /url: ../learn/javascript/index.html
+                - img [ref=e47]
+                - generic [ref=e50]: Overview
+            - listitem [ref=e51]:
+              - link "Foundations (ch 1-4)" [ref=e52] [cursor=pointer]:
+                - /url: ../learn/javascript/foundations.html
+                - generic [ref=e54]: Foundations (ch 1-4)
+            - listitem [ref=e55]:
+              - link "Control flow (ch 5-7) soon" [ref=e56] [cursor=pointer]:
+                - /url: ../learn/javascript/control-flow.html
+                - generic [ref=e58]: Control flow (ch 5-7)
+                - generic [ref=e59]: soon
+            - listitem [ref=e60]:
+              - link "Data structures (ch 8-12) soon" [ref=e61] [cursor=pointer]:
+                - /url: ../learn/javascript/data-structures.html
+                - generic [ref=e63]: Data structures (ch 8-12)
+                - generic [ref=e64]: soon
+            - listitem [ref=e65]:
+              - link "Functions (ch 9 + 13) soon" [ref=e66] [cursor=pointer]:
+                - /url: ../learn/javascript/functions.html
+                - generic [ref=e68]: Functions (ch 9 + 13)
+                - generic [ref=e69]: soon
+            - listitem [ref=e70]:
+              - link "Async (ch 14-15) soon" [ref=e71] [cursor=pointer]:
+                - /url: ../learn/javascript/async.html
+                - generic [ref=e73]: Async (ch 14-15)
+                - generic [ref=e74]: soon
+            - listitem [ref=e75]:
+              - link "OOP (ch 16-17) soon" [ref=e76] [cursor=pointer]:
+                - /url: ../learn/javascript/oop.html
+                - generic [ref=e78]: OOP (ch 16-17)
+                - generic [ref=e79]: soon
+            - listitem [ref=e80]:
+              - link "JS notes" [ref=e81] [cursor=pointer]:
+                - /url: ../notes.html
+                - img [ref=e83]
+                - generic [ref=e87]: JS notes
+        - generic [ref=e88]:
+          - button "TypeScript" [expanded] [ref=e89] [cursor=pointer]:
+            - img [ref=e90]
+            - generic [ref=e93]: TypeScript
+            - img [ref=e94]
+          - list [ref=e96]:
+            - listitem [ref=e97]:
+              - link "Overview" [ref=e98] [cursor=pointer]:
+                - /url: ../learn/typescript/index.html
+                - img [ref=e100]
+                - generic [ref=e103]: Overview
+            - listitem [ref=e104]:
+              - link "Setup + basics soon" [ref=e105] [cursor=pointer]:
+                - /url: ../learn/typescript/setup.html
+                - generic [ref=e107]: Setup + basics
+                - generic [ref=e108]: soon
+            - listitem [ref=e109]:
+              - link "Types deep dive soon" [ref=e110] [cursor=pointer]:
+                - /url: ../learn/typescript/types.html
+                - generic [ref=e112]: Types deep dive
+                - generic [ref=e113]: soon
+            - listitem [ref=e114]:
+              - link "Interfaces soon" [ref=e115] [cursor=pointer]:
+                - /url: ../learn/typescript/interfaces.html
+                - generic [ref=e117]: Interfaces
+                - generic [ref=e118]: soon
+            - listitem [ref=e119]:
+              - link "Enums soon" [ref=e120] [cursor=pointer]:
+                - /url: ../learn/typescript/enums.html
+                - generic [ref=e122]: Enums
+                - generic [ref=e123]: soon
+            - listitem [ref=e124]:
+              - link "Generics soon" [ref=e125] [cursor=pointer]:
+                - /url: ../learn/typescript/generics.html
+                - generic [ref=e127]: Generics
+                - generic [ref=e128]: soon
+            - listitem [ref=e129]:
+              - link "Access modifiers + classes soon" [ref=e130] [cursor=pointer]:
+                - /url: ../learn/typescript/classes.html
+                - generic [ref=e132]: Access modifiers + classes
+                - generic [ref=e133]: soon
+        - generic [ref=e134]:
+          - button "Playwright fundamentals" [expanded] [ref=e135] [cursor=pointer]:
+            - img [ref=e136]
+            - generic [ref=e139]: Playwright fundamentals
+            - img [ref=e140]
+          - list [ref=e142]:
+            - listitem [ref=e143]:
+              - link "Curriculum hub" [ref=e144] [cursor=pointer]:
+                - /url: ../learn/playwright-fundamentals/index.html
+                - generic [ref=e146]: Curriculum hub
+            - listitem [ref=e147]:
+              - link "Multiple Element Filter" [ref=e148] [cursor=pointer]:
+                - /url: ../multiple_element_filter.html
+                - img [ref=e150]
+                - generic [ref=e153]: Multiple Element Filter
+            - listitem [ref=e154]:
+              - link "Web Table Directory" [ref=e155] [cursor=pointer]:
+                - /url: ../webtable.html
+                - img [ref=e157]
+                - generic [ref=e162]: Web Table Directory
+            - listitem [ref=e163]:
+              - link "QA Profile Form" [ref=e164] [cursor=pointer]:
+                - /url: ../tables/practice.html
+                - img [ref=e166]
+                - generic [ref=e169]: QA Profile Form
+            - listitem [ref=e170]:
+              - link "Companies Table" [ref=e171] [cursor=pointer]:
+                - /url: ../tables/webtable.html
+                - img [ref=e173]
+                - generic [ref=e176]: Companies Table
+            - listitem [ref=e177]:
+              - link "Tall Buildings Table" [ref=e178] [cursor=pointer]:
+                - /url: ../tables/webtable1.html
+                - img [ref=e180]
+                - generic [ref=e182]: Tall Buildings Table
+            - listitem [ref=e183]:
+              - link "Custom Dropdowns" [ref=e184] [cursor=pointer]:
+                - /url: ../tables/dropdowns.html
+                - img [ref=e186]
+                - generic [ref=e189]: Custom Dropdowns
+            - listitem [ref=e190]:
+              - link "Select Box Variants" [ref=e191] [cursor=pointer]:
+                - /url: ../tables/select-boxes.html
+                - img [ref=e193]
+                - generic [ref=e196]: Select Box Variants
+            - listitem [ref=e197]:
+              - link "Sortable Admin Table" [ref=e198] [cursor=pointer]:
+                - /url: ../tables/sortable.html
+                - img [ref=e200]
+                - generic [ref=e204]: Sortable Admin Table
+            - listitem [ref=e205]:
+              - link "Cricket Scorecard" [ref=e206] [cursor=pointer]:
+                - /url: ../tables/scorecard.html
+                - img [ref=e208]
+                - generic [ref=e211]: Cricket Scorecard
+            - listitem [ref=e212]:
+              - link "Frames overview" [ref=e213] [cursor=pointer]:
+                - /url: ../frames/index.html
+                - img [ref=e215]
+                - generic [ref=e217]: Frames overview
+            - listitem [ref=e218]:
+              - link "Multi-frame frameset" [ref=e219] [cursor=pointer]:
+                - /url: ../frames/multi-frames.html
+                - img [ref=e221]
+                - generic [ref=e226]: Multi-frame frameset
+            - listitem [ref=e227]:
+              - link "Nested iframes" [ref=e228] [cursor=pointer]:
+                - /url: ../frames/nested-iframes.html
+                - img [ref=e230]
+                - generic [ref=e234]: Nested iframes
+            - listitem [ref=e235]:
+              - link "Courses frameset" [ref=e236] [cursor=pointer]:
+                - /url: ../frames/courses-frameset.html
+                - img [ref=e238]
+                - generic [ref=e240]: Courses frameset
+            - listitem [ref=e241]:
+              - link "SVG locators" [ref=e242] [cursor=pointer]:
+                - /url: ../widgets/svg.html
+                - img [ref=e244]
+                - generic [ref=e248]: SVG locators
+            - listitem [ref=e249]:
+              - link "Shadow DOM" [ref=e250] [cursor=pointer]:
+                - /url: ../widgets/shadow-dom.html
+                - img [ref=e252]
+                - generic [ref=e254]: Shadow DOM
+            - listitem [ref=e255]:
+              - link "Calendar / date picker" [ref=e256] [cursor=pointer]:
+                - /url: ../widgets/calendar.html
+                - img [ref=e258]
+                - generic [ref=e260]: Calendar / date picker
+            - listitem [ref=e261]:
+              - link "Drag and drop" [ref=e262] [cursor=pointer]:
+                - /url: ../widgets/dnd.html
+                - generic [ref=e264]: Drag and drop
+            - listitem [ref=e265]:
+              - link "Toasts and notifications" [ref=e266] [cursor=pointer]:
+                - /url: ../widgets/toasts.html
+                - generic [ref=e268]: Toasts and notifications
+            - listitem [ref=e269]:
+              - link "Native dialogs" [ref=e270] [cursor=pointer]:
+                - /url: ../widgets/dialogs.html
+                - img [ref=e272]
+                - generic [ref=e274]: Native dialogs
+            - listitem [ref=e275]:
+              - link "Hover menus" [ref=e276] [cursor=pointer]:
+                - /url: ../widgets/hover-menu.html
+                - img [ref=e278]
+                - generic [ref=e280]: Hover menus
+            - listitem [ref=e281]:
+              - link "Right-click menu" [ref=e282] [cursor=pointer]:
+                - /url: ../widgets/context-menu.html
+                - img [ref=e284]
+                - generic [ref=e286]: Right-click menu
+            - listitem [ref=e287]:
+              - link "Keyboard navigation" [ref=e288] [cursor=pointer]:
+                - /url: ../widgets/keyboard-form.html
+                - img [ref=e290]
+                - generic [ref=e293]: Keyboard navigation
+            - listitem [ref=e294]:
+              - link "Windows and Tabs" [ref=e295] [cursor=pointer]:
+                - /url: ../widgets/windows-tabs.html
+                - generic [ref=e297]: Windows and Tabs
+            - listitem [ref=e298]:
+              - link "Upload and Download" [ref=e299] [cursor=pointer]:
+                - /url: ../widgets/upload-download.html
+                - generic [ref=e301]: Upload and Download
+            - listitem [ref=e302]:
+              - link "Scroll" [ref=e303] [cursor=pointer]:
+                - /url: ../widgets/scroll.html
+                - img [ref=e305]
+                - generic [ref=e308]: Scroll
+            - listitem [ref=e309]:
+              - link "Assertions (expect)" [ref=e310] [cursor=pointer]:
+                - /url: ../widgets/expect.html
+                - img [ref=e312]
+                - generic [ref=e314]: Assertions (expect)
+            - listitem [ref=e315]:
+              - link "Test modifiers, hooks, data" [ref=e316] [cursor=pointer]:
+                - /url: ../widgets/test-modifiers.html
+                - generic [ref=e318]: Test modifiers, hooks, data
+            - listitem [ref=e319]:
+              - link "Data-driven + POM" [ref=e320] [cursor=pointer]:
+                - /url: ../widgets/data-driven.html
+                - img [ref=e322]
+                - generic [ref=e326]: Data-driven + POM
+            - listitem [ref=e327]:
+              - link "Network interception" [ref=e328] [cursor=pointer]:
+                - /url: ../network/intercept.html
+                - img [ref=e330]
+                - generic [ref=e332]: Network interception
+            - listitem [ref=e333]:
+              - link "TTACart demo" [ref=e334] [cursor=pointer]:
+                - /url: ../ttacart/index.html
+                - img [ref=e336]
+                - generic [ref=e340]: TTACart demo
+            - listitem [ref=e341]:
+              - link "TTAStays booking" [ref=e342] [cursor=pointer]:
+                - /url: ../booking/index.html
+                - img [ref=e344]
+                - generic [ref=e347]: TTAStays booking
+            - listitem [ref=e348]:
+              - link "Advance Playwright framework" [ref=e349] [cursor=pointer]:
+                - /url: ../advance-framework.html
+                - img [ref=e351]
+                - generic [ref=e354]: Advance Playwright framework
+        - generic [ref=e355]:
+          - button "Playwright API Testing" [expanded] [ref=e356] [cursor=pointer]:
+            - img [ref=e357]
+            - generic [ref=e360]: Playwright API Testing
+            - img [ref=e361]
+          - list [ref=e363]:
+            - listitem [ref=e364]:
+              - link "Overview" [ref=e365] [cursor=pointer]:
+                - /url: ../learn/playwright-api/index.html
+                - img [ref=e367]
+                - generic [ref=e370]: Overview
+            - listitem [ref=e371]:
+              - link "CRUD basics" [ref=e372] [cursor=pointer]:
+                - /url: ../learn/playwright-api/crud.html
+                - generic [ref=e374]: CRUD basics
+            - listitem [ref=e375]:
+              - link "Auth + Schema" [ref=e376] [cursor=pointer]:
+                - /url: ../learn/playwright-api/auth-schema.html
+                - generic [ref=e378]: Auth + Schema
+            - listitem [ref=e379]:
+              - link "Network monitoring" [ref=e380] [cursor=pointer]:
+                - /url: ../learn/playwright-api/network.html
+                - generic [ref=e382]: Network monitoring
+        - generic [ref=e383]:
+          - button "Playwright BDD (Cucumber)" [expanded] [ref=e384] [cursor=pointer]:
+            - img [ref=e385]
+            - generic [ref=e389]: Playwright BDD (Cucumber)
+            - img [ref=e390]
+          - list [ref=e392]:
+            - listitem [ref=e393]:
+              - link "Overview" [ref=e394] [cursor=pointer]:
+                - /url: ../learn/playwright-cucumber/index.html
+                - img [ref=e396]
+                - generic [ref=e399]: Overview
+            - listitem [ref=e400]:
+              - link "Setup + first run" [ref=e401] [cursor=pointer]:
+                - /url: ../learn/playwright-cucumber/setup.html
+                - generic [ref=e403]: Setup + first run
+            - listitem [ref=e404]:
+              - link "Data-driven" [ref=e405] [cursor=pointer]:
+                - /url: ../learn/playwright-cucumber/data-driven.html
+                - generic [ref=e407]: Data-driven
+            - listitem [ref=e408]:
+              - link "CI + tags + env" [ref=e409] [cursor=pointer]:
+                - /url: ../learn/playwright-cucumber/ci-tags-env.html
+                - generic [ref=e411]: CI + tags + env
+        - generic [ref=e412]:
+          - button "Playwright DevOps" [expanded] [ref=e413] [cursor=pointer]:
+            - img [ref=e414]
+            - generic [ref=e419]: Playwright DevOps
+            - img [ref=e420]
+          - list [ref=e422]:
+            - listitem [ref=e423]:
+              - link "NPM Registry (JFrog/Nexus)" [ref=e424] [cursor=pointer]:
+                - /url: ../learn/playwright-registry/index.html
+                - generic [ref=e426]: NPM Registry (JFrog/Nexus)
+            - listitem [ref=e427]:
+              - link "Docker setup" [ref=e428] [cursor=pointer]:
+                - /url: ../learn/playwright-docker/index.html
+                - generic [ref=e430]: Docker setup
+            - listitem [ref=e431]:
+              - link "Sharding multi-container" [ref=e432] [cursor=pointer]:
+                - /url: ../learn/playwright-shard/index.html
+                - generic [ref=e434]: Sharding multi-container
+        - generic [ref=e435]:
+          - button "Playwright AI" [expanded] [ref=e436] [cursor=pointer]:
+            - img [ref=e437]
+            - generic [ref=e441]: Playwright AI
+            - img [ref=e442]
+          - list [ref=e444]:
+            - listitem [ref=e445]:
+              - link "Curriculum hub" [ref=e446] [cursor=pointer]:
+                - /url: ../learn/playwright-ai-agents/index.html
+                - generic [ref=e448]: Curriculum hub
+            - listitem [ref=e449]:
+              - link "Framework + AI (V2)" [ref=e450] [cursor=pointer]:
+                - /url: ../advance-framework-ai.html
+                - generic [ref=e452]: Framework + AI (V2)
+            - listitem [ref=e453]:
+              - link "TTACart + AI live demo" [ref=e454] [cursor=pointer]:
+                - /url: ../ttacart-ai/index.html
+                - generic [ref=e456]: TTACart + AI live demo
+            - listitem [ref=e457]:
+              - link "TTA AI Chat sandbox" [ref=e458] [cursor=pointer]:
+                - /url: ../ai-chat/index.html
+                - generic [ref=e460]: TTA AI Chat sandbox
+        - generic [ref=e461]:
+          - button "Playwright MCP" [expanded] [ref=e462] [cursor=pointer]:
+            - img [ref=e463]
+            - generic [ref=e468]: Playwright MCP
+            - img [ref=e469]
+          - list [ref=e471]:
+            - listitem [ref=e472]:
+              - link "Curriculum hub" [ref=e473] [cursor=pointer]:
+                - /url: ../learn/playwright-mcp/index.html
+                - generic [ref=e475]: Curriculum hub
+        - generic [ref=e476]:
+          - button "Playwright CLI" [expanded] [ref=e477] [cursor=pointer]:
+            - img [ref=e478]
+            - generic [ref=e481]: Playwright CLI
+            - img [ref=e482]
+          - list [ref=e484]:
+            - listitem [ref=e485]:
+              - link "Curriculum hub" [ref=e486] [cursor=pointer]:
+                - /url: ../learn/playwright-cli/index.html
+                - generic [ref=e488]: Curriculum hub
+            - listitem [ref=e489]:
+              - link "SnapLocator (Chrome ext)" [ref=e490] [cursor=pointer]:
+                - /url: ../snaplocator.html
+                - img [ref=e492]
+                - generic [ref=e495]: SnapLocator (Chrome ext)
+      - generic [ref=e496]:
+        - generic [ref=e497]: © The Testing Academy · 2026
+        - button "Toggle dark mode" [ref=e498] [cursor=pointer]:
+          - img [ref=e499]
+    - generic [ref=e501]:
+      - banner [ref=e502]:
+        - button "Open sidebar" [ref=e503] [cursor=pointer]:
+          - img [ref=e504]
+        - generic [ref=e506]:
+          - link "Practice" [ref=e507] [cursor=pointer]:
+            - /url: ../index.html
+          - img [ref=e508]
+          - strong [ref=e510]: Frame Handling
+        - generic [ref=e511]:
+          - generic [ref=e512] [cursor=pointer]:
+            - checkbox "Locator markers" [checked] [ref=e513]
+            - generic [ref=e514]: Locator markers
+          - generic [ref=e515]: iframe + frameset
+          - button "Toggle dark mode" [ref=e516] [cursor=pointer]:
+            - img [ref=e517]
+            - img [ref=e519]
+      - main [ref=e522]:
+        - region "Frame handling practice" [ref=e523]:
+          - generic [ref=e524]: Frame practice · iframe + frameset
+          - heading "Frame handling practice" [level=1] [ref=e526]:
+            - text: Frame
+            - emphasis [ref=e527]: handling
+            - text: practice
+          - paragraph [ref=e528]:
+            - text: Two scenarios — a modern
+            - code [ref=e529]: <iframe>
+            - text: hosting a registration form, and a classic
+            - code [ref=e530]: <frameset>
+            - text: page with three named frames. Practise
+            - code [ref=e531]: page.frameLocator()
+            - text: ","
+            - code [ref=e532]: page.frames()
+            - text: ", and counting/iterating"
+            - code [ref=e533]: frame
+            - text: elements.
+        - region "Frame handling workspace" [ref=e534]:
+          - generic [ref=e535]:
+            - article [ref=e536]:
+              - heading "Vehicle registration · iframe practice" [level=3] [ref=e537]
+              - heading "① Single iframe — fill the embedded form" [level=2] [ref=e538]
+              - paragraph [ref=e539]:
+                - text: The form below is loaded inside an
+                - code [ref=e540]: iframe[id*='frame-one']
+                - text: . Practise
+                - code [ref=e541]: page.frameLocator(...)
+                - text: to reach
+                - code [ref=e542]: "#RESULT_TextField-1"
+                - text: and the rest.
+              - iframe [active] [ref=e544]:
+                - generic [ref=f1e2]:
+                  - generic [ref=f1e3]: Inside iframe
+                  - heading "Vehicle registration" [level=1] [ref=f1e4]
+                  - paragraph [ref=f1e5]:
+                    - text: This form lives inside an iframe. Reach it from the parent page using
+                    - code [ref=f1e6]: page.frameLocator(...)
+                    - text: .
+                  - generic [ref=f1e7]:
+                    - generic [ref=f1e8]:
+                      - generic [ref=f1e9]: Vehicle name
+                      - textbox "Vehicle name" [ref=f1e10]:
+                        - /placeholder: e.g. Test Automation
+                        - text: Toyota Fortuner
+                    - generic [ref=f1e11]:
+                      - generic [ref=f1e12]:
+                        - generic [ref=f1e13]: Owner name
+                        - textbox "Owner name" [ref=f1e14]:
+                          - /placeholder: Aarav Sharma
+                          - text: Nikhil
+                      - generic [ref=f1e15]:
+                        - generic [ref=f1e16]: Registration number
+                        - textbox "Registration number" [active] [ref=f1e17]:
+                          - /placeholder: MH-12-AB-1234
+                          - text: HR26CJ9945
+                    - generic [ref=f1e18]:
+                      - generic [ref=f1e19]:
+                        - generic [ref=f1e20]: Vehicle type
+                        - combobox "Vehicle type" [ref=f1e21]:
+                          - option "Select type" [selected]
+                          - option "Hatchback"
+                          - option "Sedan"
+                          - option "SUV"
+                          - option "Electric"
+                          - option "Two-wheeler"
+                      - generic [ref=f1e22]:
+                        - generic [ref=f1e23]: Year
+                        - spinbutton "Year" [ref=f1e24]
+                    - generic [ref=f1e25]:
+                      - generic [ref=f1e26]: Notes
+                      - textbox "Notes" [ref=f1e27]:
+                        - /placeholder: Any notes about the registration
+                    - generic [ref=f1e28]:
+                      - button "Submit registration" [ref=f1e29] [cursor=pointer]
+                      - button "Reset" [ref=f1e30] [cursor=pointer]
+                    - generic [ref=f1e31]: Submitted form data will appear here.
+              - generic [ref=e545]:
+                - generic [ref=e546]:
+                  - generic [ref=e547]: id
+                  - text: =frame-one
+                - generic [ref=e548]:
+                  - generic [ref=e549]: name
+                  - text: =vehicle-form
+                - generic [ref=e550]:
+                  - generic [ref=e551]: data-testid
+                  - text: =iframe-form-card
+                - generic [ref=e552]:
+                  - generic [ref=e553]: title-host
+                  - text: =h3.details__form-preview-title
+              - paragraph [ref=e554]:
+                - text: "Selector matrix:"
+                - strong [ref=e555]: iframe[id*='frame-one']
+                - text: ·
+                - strong [ref=e556]: iframe[name='vehicle-form']
+                - text: ·
+                - strong [ref=e557]: iframe[title*='Vehicle']
+            - article [ref=e558]:
+              - heading "② Multi-frame frameset — named frames" [level=2] [ref=e559]
+              - paragraph [ref=e560]:
+                - text: A separate page renders three classic
+                - code [ref=e561]: <frame>
+                - text: elements (
+                - code [ref=e562]: main
+                - text: ","
+                - code [ref=e563]: side
+                - text: ","
+                - code [ref=e564]: footer
+                - text: ). Open it in a new tab to use
+                - code [ref=e565]: page.locator('//frame').all()
+                - text: and count
+                - code [ref=e566]: page.frames()
+                - text: .
+              - link "Open multi-frames frameset 3 frames named main / side / footer · best opened in a new tab" [ref=e567] [cursor=pointer]:
+                - /url: ./multi-frames.html
+                - img [ref=e569]
+                - generic [ref=e571]:
+                  - strong [ref=e572]: Open multi-frames frameset
+                  - generic [ref=e573]: 3 frames named main / side / footer · best opened in a new tab
+              - generic [ref=e574]:
+                - generic [ref=e576]: frame[name='main']
+                - generic [ref=e578]: frame[name='side']
+                - generic [ref=e580]: frame[name='footer']
+          - complementary [ref=e581]:
+            - generic [ref=e582]:
+              - heading "What students should practise" [level=3] [ref=e583]
+              - list [ref=e584]:
+                - listitem [ref=e585]:
+                  - text: Reach
+                  - code [ref=e586]: "#RESULT_TextField-1"
+                  - text: via
+                  - code [ref=e587]: page.frameLocator("iframe[id*='frame-one']")
+                  - text: and fill it.
+                - listitem [ref=e588]:
+                  - text: Read the outer-page heading
+                  - code [ref=e589]: h3.details__form-preview-title
+                  - text: and assert the page title.
+                - listitem [ref=e590]:
+                  - text: On the frameset page, use
+                  - code [ref=e591]: frameLocator("[name='main']")
+                  - text: and read its h2.
+                - listitem [ref=e592]:
+                  - text: Count frames via
+                  - code [ref=e593]: page.locator('//frame').all()
+                  - text: and
+                  - code [ref=e594]: page.frames().length
+                  - text: .
+                - listitem [ref=e595]: Iterate frames and log each frame's name and src.
+            - group [ref=e596]:
+              - generic "Playwright solution Both scenarios — iframe form fill and frameset enumeration. Show solution" [ref=e597] [cursor=pointer]:
+                - img [ref=e599]
+                - generic [ref=e601]:
+                  - strong [ref=e602]: Playwright solution
+                  - generic [ref=e603]: Both scenarios — iframe form fill and frameset enumeration.
+                - generic [ref=e604]: Show solution
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect, FrameLocator } from '@playwright/test';
+  2  | 
+  3  | test('Basic Web Test - Verify Page Title', async ({ page }) => {
+  4  | 
+  5  |     await page.goto('https://app.thetestingacademy.com/playwright/frames/')
+  6  | 
+  7  |     let vehicleframe: FrameLocator = await page.frameLocator("#frame-one")
+  8  |     await vehicleframe.getByRole("textbox", {name: 'Vehicle name'}).fill("Toyota Fortuner")
+  9  |     await vehicleframe.getByRole("textbox", {name: 'Owner name'}).fill("Nikhil")
+  10 |     await vehicleframe.getByRole("textbox", {name: 'Registration number'}).fill("HR26CJ9945")
+> 11 |     await vehicleframe.getByRole("textbox", {name: 'Vehicle type'}).selectOption('SUV')
+     |                                                                     ^ Error: locator.selectOption: Test timeout of 30000ms exceeded.
+  12 |     await vehicleframe.getByRole("textbox", {name: 'Year'}).fill("2026")
+  13 |     await vehicleframe.getByRole("textbox", {name: 'Notes'}).fill("Family SUV with rugged performance")
+  14 |     await vehicleframe.getByTestId("vehicle-submit").click()
+  15 |      
+  16 |     let output = await vehicleframe.locator("#vehicle-output").innerText();
+  17 |     console.log(output);
+  18 | 
+  19 |     await page.waitForTimeout(5000);
+  20 | })
+```
